@@ -1,3 +1,7 @@
-.action-btn:active {
+.action-btn:not(:disabled):active {
     transform: translateY(4px);
+}
+
+.action-btn:disabled {
+    cursor: not-allowed;
 }

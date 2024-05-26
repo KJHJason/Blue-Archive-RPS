@@ -1,16 +1,28 @@
+import GitHubIcon from "./GitHubIcon";
+
 const Footer = () => {
   return (
-    <footer className="mt-5">
-      <p className="text-center">
-        Made with ❤️ by{" "}
+    <footer className="text-center mt-5">
+      <div className="flex">
+        <p className="ms-auto">
+          Made by{" "}
+          <a
+            className="underline"
+            href="https://github.com/KJHJason"
+            target="_blank"
+          >
+            KJHJason
+          </a>
+        </p>
         <a
-          className="underline"
-          href="https://github.com/KJHJason"
+          href="https://github.com/KJHJason/Blue-Archive-RPS"
           target="_blank"
+          className="ms-2 me-auto text-white"
         >
-          KJHJason
+          <GitHubIcon />
         </a>
-      </p>
+      </div>
+      <p className="mt-2">Assets by © NEXON Games Co. Ltd & Yostar, Inc.</p>
     </footer>
   );
 };

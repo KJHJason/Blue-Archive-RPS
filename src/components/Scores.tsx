@@ -1,11 +1,24 @@
-const Scores = () => {
+interface Props {
+  wins: number;
+  losses: number;
+  ties: number;
+  onReset: () => void;
+}
+
+const Scores = ({ wins, losses, ties, onReset }: Props) => {
   return (
-    <div className="mt-12 bg-cyan-600 rounded-lg w-56 mx-auto">
+    <div className="mt-12 bg-cyan-600 rounded-lg md:w-[500px] mx-auto">
       <h3>Scores</h3>
-      <div className="text-left px-6 py-3">
-        <p>Arona: 0</p>
-        <p>Sensei (You): 0</p>
+      <div className="px-6 py-3">
+        <p>
+          Wins: {wins}. Losses: {losses}. Ties: {ties}.
+        </p>
       </div>
+      {(wins > 0 || losses > 0 || ties > 0) && (
+        <button className="btn btn-danger" onClick={onReset}>
+          Reset
+        </button>
+      )}
     </div>
   );
 };

@@ -1,30 +1,16 @@
-import paper from "../public/paper.png";
-import rock from "../public/rock.png";
-import scissors from "../public/scissors.png";
 import "../styles/button.css";
+import { Action } from "../scripts/interfaces";
+import { actionToImg } from "../scripts/utils";
 
-interface Props {
-  role: "scissors" | "rock" | "paper";
+interface Props extends Action{
+  disabled: boolean;
   onClick: (action: string) => void;
 }
 
-const roleToImg = (role: string) => {
-  switch (role) {
-    case "scissors":
-      return scissors;
-    case "rock":
-      return rock;
-    case "paper":
-      return paper;
-    default:
-      throw new Error("Invalid role");
-  }
-};
-
-const Button = ({ role, onClick }: Props) => {
+const Button = ({ action, onClick, disabled }: Props) => {
   return (
-    <button className="mt-3 w-24 rounded-full action-btn" onClick={() => onClick(role)}>
-      <img className="" src={roleToImg(role)} alt={role + " button"} />
+    <button className="mt-3 xs:w-24 w-14 rounded-full action-btn" onClick={() => onClick(action)} aria-label={action} disabled={disabled}>
+      <img src={actionToImg(action)} alt={`${action} image used for the button content`} />
     </button>
   );
 };
