@@ -88,6 +88,7 @@ const App = () => {
               onClick={onUserClick}
               disabled={isPlayingVideo}
             />
+            <p className="text-sm text-red-600">*If your clicks are not being registered, please try clicking again!</p>
           </>
         )}
         <Scores wins={wins} losses={losses} ties={ties} onReset={onReset} />
