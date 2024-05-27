@@ -9,6 +9,7 @@ It is mainly a mini-project for me to learn how to create a simple game with Rea
 ## Running the project
 
 To run the project, you can follow these steps:
+
 1. Clone the repository
 2. Run `npm install` to install the dependencies
 3. Run `npm run dev` to start the development server
