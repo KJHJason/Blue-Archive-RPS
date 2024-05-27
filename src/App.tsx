@@ -62,7 +62,7 @@ const App = () => {
 
   return (
     <>
-      <h1 className="mt-2 text-center">Arona RPS</h1>
+      <h1 className="mt-2 text-center">RPS With Arona</h1>
       <main className="sm:p-5 p-1 w-full text-center">
         <div className="mx-auto aspect-video md:w-[60%] w-full">
           <AronaVideo
