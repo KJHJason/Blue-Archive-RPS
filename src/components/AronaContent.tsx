@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 import { ROCK, PAPER, SCISSORS } from "../scripts/constants";
 import { GetResult, LOSE, WIN } from "../scripts/game";
-import paper from "../public/paper.mp4";
-import rock from "../public/rock.mp4";
-import scissors from "../public/scissors.mp4";
-import initial from "../public/initial.jpg";
+import paper from "../assets/paper.mp4";
+import rock from "../assets/rock.mp4";
+import scissors from "../assets/scissors.mp4";
+import initial from "../assets/initial.jpg";
 
 interface Props {
   senseiAction: string;
@@ -83,7 +83,7 @@ const AronaVideo = ({
     );
 
   return (
-    <video className="rounded-lg" autoPlay ref={videoRef}>
+    <video className="rounded-lg" autoPlay webkit-playsinline="" playsInline ref={videoRef}>
       <source src={getVideoFromAction(aronaAction)} type="video/mp4" />
       Your browser does not support the video tag.
     </video>

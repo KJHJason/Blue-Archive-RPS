@@ -17,7 +17,7 @@ const Footer = () => {
         <a
           href="https://github.com/KJHJason/Blue-Archive-RPS"
           target="_blank"
-          className="ms-2 me-auto text-white"
+          className="ms-2 me-auto text-white underline"
         >
           <GitHubIcon />
         </a>

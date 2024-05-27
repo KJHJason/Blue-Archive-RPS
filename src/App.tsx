@@ -1,11 +1,16 @@
 import { useState } from "react";
-import { ROCK, PAPER, SCISSORS, WIN_KEY, LOSS_KEY, TIE_KEY } from "../scripts/constants";
-import { GetRandomAction } from "../scripts/game";
-import Button from "../components/Button";
-import Footer from "../components/Footer";
-import Scores from "../components/Scores";
-import AronaVideo from "../components/AronaContent";
-import SelctedButton from "../components/SelectedButton";
+import { ROCK, PAPER, SCISSORS, WIN_KEY, LOSS_KEY, TIE_KEY, DARK_MODE_ARONA, LIGHT_MODE_ARONA } from "./scripts/constants";
+import { GetRandomAction } from "./scripts/game";
+import Button from "./components/Button";
+import Footer from "./components/Footer";
+import Scores from "./components/Scores";
+import AronaVideo from "./components/AronaContent";
+import SelctedButton from "./components/SelectedButton";
+
+console.log(
+  `%c${window.matchMedia("(prefers-color-scheme: dark)").matches ? DARK_MODE_ARONA : LIGHT_MODE_ARONA}`, 
+  "font-family: monospace; white-space: pre;",
+);
 
 const App = () => {
   const [playerAction, setPlayerAction] = useState("");
@@ -57,7 +62,7 @@ const App = () => {
 
   return (
     <>
-      <h1 className="text-center">Arona RPS</h1>
+      <h1 className="mt-2 text-center">Arona RPS</h1>
       <main className="sm:p-5 p-1 w-full text-center">
         <div className="mx-auto aspect-video md:w-[60%] w-full">
           <AronaVideo

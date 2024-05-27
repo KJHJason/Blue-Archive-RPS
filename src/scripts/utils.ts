@@ -1,7 +1,7 @@
 import { ROCK, PAPER, SCISSORS } from "./constants";
-import paper from "../public/paper.png";
-import rock from "../public/rock.png";
-import scissors from "../public/scissors.png";
+import paper from "../assets/paper.png";
+import rock from "../assets/rock.png";
+import scissors from "../assets/scissors.png";
 
 export const actionToImg = (action: string): string => {
   switch (action) {

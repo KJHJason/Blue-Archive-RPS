@@ -7,3 +7,6 @@
 
 /assets/*.js
   Cache-Control: public, max-age=2592000
+
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
