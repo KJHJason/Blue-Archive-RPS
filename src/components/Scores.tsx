@@ -7,7 +7,7 @@ interface Props {
 
 const Scores = ({ wins, losses, ties, onReset }: Props) => {
   return (
-    <div className="mt-12 bg-cyan-600 rounded-lg md:w-[500px] mx-auto">
+    <div className="mt-12 bg-cyan-600 rounded-lg md:w-[500px] mx-auto p-3">
       <h3>Scores</h3>
       <div className="px-6 py-3">
         <p>

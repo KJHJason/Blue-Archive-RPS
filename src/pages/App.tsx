@@ -59,7 +59,7 @@ const App = () => {
     <>
       <h1 className="text-center">Arona RPS</h1>
       <main className="sm:p-5 p-1 w-full text-center">
-        <div className="mx-auto aspect-video md:w-[70%] w-full">
+        <div className="mx-auto aspect-video md:w-[60%] w-full">
           <AronaVideo
             senseiAction={playerAction}
             aronaAction={computerAction}

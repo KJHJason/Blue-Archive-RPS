@@ -55,18 +55,16 @@ const AronaVideo = ({
     if (isPlayingVideo) return;
 
     videoElement.onended = () => {
-      setTimeout(() => {
-        setIsPlayingVideo(false);
+      setIsPlayingVideo(false);
 
-        const result = GetResult(senseiAction, aronaAction);
-        if (result === WIN) {
-          incrementWins();
-        } else if (result === LOSE) {
-          incrementLosses();
-        } else {
-          incrementTies();
-        }
-      }, 1000);
+      const result = GetResult(senseiAction, aronaAction);
+      if (result === WIN) {
+        incrementWins();
+      } else if (result === LOSE) {
+        incrementLosses();
+      } else {
+        incrementTies();
+      }
     };
 
     videoElement.load();
